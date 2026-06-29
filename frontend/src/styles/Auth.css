@@ -1,0 +1,602 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* =========================
+   Background
+========================= */
+
+.auth-page{
+    width:100%;
+    min-height:100vh;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #6d28d9,
+        #9333ea
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+/* Dark Theme */
+
+.auth-page.dark{
+
+    background:#111827;
+
+}
+
+/* =========================
+ Floating Circles
+========================= */
+
+.floating{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    animation:float 8s infinite ease-in-out;
+
+}
+
+.one{
+
+    width:280px;
+    height:280px;
+
+    top:-80px;
+    left:-60px;
+
+}
+
+.two{
+
+    width:180px;
+    height:180px;
+
+    bottom:40px;
+    left:35%;
+
+    animation-delay:2s;
+
+}
+
+.three{
+
+    width:350px;
+    height:350px;
+
+    right:-120px;
+    top:40%;
+
+    animation-delay:3s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+50%{
+
+transform:translateY(-30px) rotate(15deg);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* =========================
+ Theme Button
+========================= */
+
+.theme-btn{
+
+position:absolute;
+
+top:25px;
+
+right:25px;
+
+width:50px;
+
+height:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:white;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+z-index:100;
+
+transition:.3s;
+
+}
+
+.theme-btn:hover{
+
+transform:rotate(180deg);
+
+}
+
+/* =========================
+ Left Side
+========================= */
+
+.left{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px;
+
+color:white;
+
+}
+
+.left img{
+
+width:80%;
+
+max-width:480px;
+
+animation:upDown 4s infinite ease-in-out;
+
+}
+
+@keyframes upDown{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.left h1{
+
+font-size:50px;
+
+font-weight:700;
+
+margin-top:30px;
+
+}
+
+.left p{
+
+margin-top:20px;
+
+font-size:18px;
+
+text-align:center;
+
+line-height:30px;
+
+max-width:500px;
+
+opacity:.9;
+
+}
+
+/* =========================
+ Right Side
+========================= */
+
+.right{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+/* =========================
+ Card
+========================= */
+
+.card{
+
+width:450px;
+
+padding:45px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:30px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.dark .card{
+
+background:#1f2937;
+
+}
+
+.card h2{
+
+font-size:40px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+color:white;
+
+opacity:.8;
+
+margin-bottom:25px;
+
+}
+
+/* =========================
+ Inputs
+========================= */
+
+.input-box{
+
+display:flex;
+
+align-items:center;
+
+background:white;
+
+padding:14px 18px;
+
+margin-bottom:18px;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.input-box:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.input-box svg{
+
+color:#555;
+
+font-size:18px;
+
+}
+
+.input-box input{
+
+flex:1;
+
+border:none;
+
+outline:none;
+
+margin-left:12px;
+
+font-size:16px;
+
+background:transparent;
+
+}
+
+.input-box span{
+
+cursor:pointer;
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/* =========================
+ Button
+========================= */
+
+.card button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(
+
+90deg,
+
+#2563eb,
+
+#7c3aed
+
+);
+
+font-size:18px;
+
+font-weight:600;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:10px;
+
+}
+
+.card button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 12px 25px rgba(0,0,0,.25);
+
+}
+
+/* =========================
+ Divider
+========================= */
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+margin:28px 0;
+
+}
+
+.divider::before,
+
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:white;
+
+opacity:.3;
+
+}
+
+.divider span{
+
+padding:0 18px;
+
+color:white;
+
+}
+
+/* =========================
+ Social Buttons
+========================= */
+
+.social{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.google-btn,
+.microsoft-btn{
+
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    background:#fff;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+.google-btn:hover,
+.microsoft-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.google-icon{
+
+    font-size:28px;
+
+}
+
+.microsoft-icon{
+
+    font-size:24px;
+
+    color:#00A4EF;
+
+}
+
+/* =========================
+ Links
+========================= */
+
+.card a{
+
+color:#FFD54F;
+
+font-weight:600;
+
+text-decoration:none;
+
+margin-left:6px;
+
+}
+
+.card a:hover{
+
+text-decoration:underline;
+
+}
+
+/* =========================
+ Responsive
+========================= */
+
+@media(max-width:1000px){
+
+.auth-page{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+display:none;
+
+}
+
+.right{
+
+padding:20px;
+
+}
+
+.card{
+
+width:100%;
+
+max-width:450px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.card{
+
+padding:30px 20px;
+
+}
+
+.card h2{
+
+font-size:32px;
+
+}
+
+.input-box{
+
+padding:12px;
+
+}
+
+.card button{
+
+padding:13px;
+
+}
+
+}
