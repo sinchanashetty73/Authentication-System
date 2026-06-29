@@ -82,7 +82,7 @@ Authentication-System/
 ## 1. Clone the Repository
 
 bash
-git clone https://github.com/yourusername/authentication-system.git
+https://github.com/sinchanashetty73/Authentication-System.git
 
 
 Go to the project folder.
